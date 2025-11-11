@@ -66,8 +66,4 @@ how to share sensitive details securely.
 - Regular status updates: at least weekly
 - Target for fix/mitigation: within 90 days for typical issues (may vary)
 
----
 
-If you'd like the e-mail address or timeframes changed, or prefer to only accept
-reports via GitHub Security Advisories, tell me which method and I'll update the
-file accordingly.
