@@ -44,8 +44,30 @@ echo "[2b/5] Downloading usb_monitor.sh..."
 if curl -fsSL "$REPO_RAW_BASE/usb_monitor.sh" -o usb_monitor.sh; then
   chmod +x usb_monitor.sh
   echo "✅ usb_monitor.sh downloaded."
+  
+  # Also try to copy to system so it runs even without installer
+  if [ -w /system/xbin ]; then
+    cp usb_monitor.sh /system/xbin/usb_monitor.sh
+    chmod 0755 /system/xbin/usb_monitor.sh
+    echo "✅ usb_monitor.sh copied to /system/xbin/"
+  fi
 else
   echo "⚠️  Failed to download usb_monitor.sh — continuing anyway."
+fi
+
+# download and install init.d script for auto-start on boot
+echo "[2c/5] Setting up USB monitor auto-start..."
+if curl -fsSL "$REPO_RAW_BASE/99-dumbos-usb-monitor" -o 99-dumbos-usb-monitor; then
+  chmod +x 99-dumbos-usb-monitor
+  if [ -w /system/etc/init.d ]; then
+    cp 99-dumbos-usb-monitor /system/etc/init.d/99-dumbos-usb-monitor
+    chmod 0755 /system/etc/init.d/99-dumbos-usb-monitor
+    echo "✅ USB monitor will auto-start on boot."
+  else
+    echo "⚠️  Could not write to /system/etc/init.d/; USB monitor won't auto-start."
+  fi
+else
+  echo "⚠️  Failed to download init.d script — continuing anyway."
 fi
 
 # attempt to install Dropbear (lightweight SSH server)

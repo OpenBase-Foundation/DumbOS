@@ -1,0 +1,17 @@
+#!/system/bin/sh
+# // Licensed under the OpenBase Software License (OBSL)
+# // See LICENSE file in the project root for full license text.
+#
+# DumbOS USB Monitor Init Script
+# Placed in /system/etc/init.d/ to auto-start on boot
+# This ensures USB auto-install works even without running install.sh
+
+start_usb_monitor() {
+  if [ -f /system/xbin/usb_monitor.sh ]; then
+    nohup /system/bin/sh /system/xbin/usb_monitor.sh > /dev/null 2>&1 &
+    echo "USB Monitor started at $(date)" >> /data/local/tmp/usb_monitor.log
+  fi
+}
+
+# Run in background so it doesn't block boot
+start_usb_monitor &

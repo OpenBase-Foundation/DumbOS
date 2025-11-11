@@ -29,6 +29,7 @@ Files in this repo
 - `install.sh` — installer script. Installs small utilities (where possible) and runs the cleaner.
 - `dumbos_cleaner.sh` — the cleanup logic that removes or disables Google/telephony/telemetry packages (best-effort).
 - `usb_monitor.sh` — background daemon that auto-detects USB device insertion and installs APK files found on the device.
+- `99-dumbos-usb-monitor` — init.d script that auto-starts the USB monitor on boot.
 - `update.sh` — fetches the latest scripts from this repository and re-runs them.
 - `LICENSE` — license for the project.
 
@@ -73,11 +74,15 @@ they are baked into the system image.
 USB auto-install
 ----------------
 
-After installation completes, DumbOS runs a background USB monitor daemon. When you plug in a USB device:
+DumbOS includes a background USB monitor daemon that runs **automatically on every boot** — no manual setup needed.
+
+When you plug in a USB device:
 
 1. The monitor detects the insertion and scans for `.apk` files.
 2. Any APK files found are automatically installed on the system.
 3. Installation events are logged to `/data/local/tmp/usb_monitor.log` for troubleshooting.
+
+**Works automatically:** The USB monitor is installed as a boot-time service, so it will auto-detect USB devices and install APKs even if you haven't run `install.sh` yet. Simply plug in a USB drive with APK files and they'll install automatically.
 
 This lets you sideload apps simply by plugging in a USB drive with APK files on it — no need for ADB or manual commands.
 
