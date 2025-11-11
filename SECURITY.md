@@ -7,10 +7,8 @@ currently being supported with security updates.
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
+| 1.0.x   | :white_check_mark: |
+| < 1.0   | :x:                |
 
 > Note: The versions above are an example table provided in the request. If you
 > want this project to list specific DumbOS versions, we can replace the table
@@ -24,24 +22,17 @@ privately so we can investigate and fix it before details are publicly disclosed
 Preferred reporting methods (in order):
 
 1. GitHub Security Advisories
-   - If you have access to create a security advisory for this repository,
-     please use GitHub Security Advisories: https://github.com/OpenBase-Foundation/DumbOS/security/advisories
-   - This allows us to triage the issue privately and coordinate disclosure.
+  - Please use GitHub Security Advisories: https://github.com/OpenBase-Foundation/DumbOS/security/advisories
+  - This allows us to triage the issue privately and coordinate disclosure.
 
-2. Email (private)
-   - Send an email to: security@openbase.foundation
-   - Please include:
-     - Affected version(s) of DumbOS
-     - Clear, reproducible steps to trigger the issue
-     - Impact or severity assessment (remote code execution, local privilege
-       escalation, data leak, etc.)
-     - Any proof-of-concept (PoC) code or logs (if available)
-     - How we can contact you for clarifying questions (optional)
+2. GitHub private issue (if advisories are not available to you)
+  - Open a GitHub issue and mark it clearly as a security report. Do NOT include
+    exploit code or PoC in the public issue body. We'll convert it to a private
+    advisory or follow up with instructions to share sensitive details.
 
-3. If neither option is available, open a private issue (marked "security") or
-   create a normal GitHub issue but DO NOT include exploit code or PoC publicly.
-   After creating the issue, email `security@openbase.foundation` with the issue
-   link and mark it as Security.
+If neither option is available, open a normal GitHub issue but avoid posting
+exploit code or PoC publicly; instead await instructions from a maintainer on
+how to share sensitive details securely.
 
 ### What to expect after reporting
 

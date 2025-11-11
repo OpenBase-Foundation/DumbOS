@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ---
 
 ## [Unreleased]
+- Prepare `1.0.0` release (to be published soon)
 
 ---
 
@@ -46,32 +47,19 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
-## [1.0.0] - 2025-11-11
+## [1.0.0] - (planned)
 
-### Initial Release
+### Initial Release (planned)
 
-#### Added
-- **Core DumbOS System**
-  - `install.sh`: Main installer script for setting up DumbOS
-  - `dumbos_cleaner.sh`: Removes Google/telemetry/telephony packages
-  - `update.sh`: Fetches latest scripts from repository
-  - `LICENSE`: OpenBase Software License (OBSL) v1.0
+This release is being prepared and will be published soon as `1.0.0`.
 
-#### Features
-- Removes Google Services, GMS, and telemetry components
-- Enables sideloading (non-market APK installs)
-- Enables ADB for remote management
-- Disables unwanted system services (backup, location tracking, etc.)
-- Attempts to install lightweight Dropbear SSH server
-- Attempts to install KISS Launcher from F-Droid
-- Network connectivity check before installation
-- Root permission validation
-- Best-effort approach for package removal (handles ROM variations)
+#### Included (planned)
+- `install.sh`: Main installer script for setting up DumbOS
+- `dumbos_cleaner.sh`: Removes Google/telemetry/telephony packages
+- `update.sh`: Fetches latest scripts from repository
+- `LICENSE`: OpenBase Software License (OBSL) v1.0
 
-#### Documentation
-- Comprehensive README with quick-start instructions
-- Safety guidelines and backup recommendations
-- Command examples for installation and rebooting
+More details and an official release date will be published when the release is published.
 
 ---
 
