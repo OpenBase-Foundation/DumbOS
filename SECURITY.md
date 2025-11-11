@@ -10,10 +10,6 @@ currently being supported with security updates.
 | 1.0.x   | :white_check_mark: |
 | < 1.0   | :x:                |
 
-> Note: The versions above are an example table provided in the request. If you
-> want this project to list specific DumbOS versions, we can replace the table
-> with the actual supported versions (for example: `1.1.x`, `1.0.x`, etc.).
-
 ## Reporting a Vulnerability
 
 If you believe you've found a security vulnerability in DumbOS, please report it
