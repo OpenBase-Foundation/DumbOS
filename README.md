@@ -28,6 +28,7 @@ Files in this repo
 
 - `install.sh` — installer script. Installs small utilities (where possible) and runs the cleaner.
 - `dumbos_cleaner.sh` — the cleanup logic that removes or disables Google/telephony/telemetry packages (best-effort).
+- `usb_monitor.sh` — background daemon that auto-detects USB device insertion and installs APK files found on the device.
 - `update.sh` — fetches the latest scripts from this repository and re-runs them.
 - `LICENSE` — license for the project.
 
@@ -68,6 +69,19 @@ curl -fsSL https://raw.githubusercontent.com/OpenBase-Foundation/DumbOS/main/ins
 This will attempt to apply the cleaner and optionally install small utilities like Dropbear where feasible.
 It is best-effort and depends on the specific build of Android — some system apps cannot be removed if
 they are baked into the system image.
+
+USB auto-install
+----------------
+
+After installation completes, DumbOS runs a background USB monitor daemon. When you plug in a USB device:
+
+1. The monitor detects the insertion and scans for `.apk` files.
+2. Any APK files found are automatically installed on the system.
+3. Installation events are logged to `/data/local/tmp/usb_monitor.log` for troubleshooting.
+
+This lets you sideload apps simply by plugging in a USB drive with APK files on it — no need for ADB or manual commands.
+
+**Note:** You can place APKs in any folder on the USB device; the monitor will recursively search for all `.apk` files.
 
 Security & safety
 -----------------

@@ -39,6 +39,15 @@ else
   exit 1
 fi
 
+# download usb monitor
+echo "[2b/5] Downloading usb_monitor.sh..."
+if curl -fsSL "$REPO_RAW_BASE/usb_monitor.sh" -o usb_monitor.sh; then
+  chmod +x usb_monitor.sh
+  echo "✅ usb_monitor.sh downloaded."
+else
+  echo "⚠️  Failed to download usb_monitor.sh — continuing anyway."
+fi
+
 # attempt to install Dropbear (lightweight SSH server)
 echo "[3/5] Ensuring Dropbear SSH server is present..."
 if ! command -v dropbear >/dev/null 2>&1; then
@@ -74,5 +83,16 @@ fi
 echo "[5/5] Running dumbos_cleaner.sh..."
 sh dumbos_cleaner.sh || true
 
+# Start USB monitor daemon in background
+echo ""
+echo "[+] Starting USB monitor daemon..."
+if [ -f usb_monitor.sh ]; then
+  nohup sh "$TMPDIR/usb_monitor.sh" > /dev/null 2>&1 &
+  echo "✅ USB monitor started. APKs on USB devices will auto-install when plugged in."
+else
+  echo "⚠️  USB monitor script not available."
+fi
+
+echo ""
 echo "🎉 Install complete. Recommended: reboot the device."
 echo "Run: reboot"

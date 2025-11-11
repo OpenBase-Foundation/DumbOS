@@ -1,5 +1,61 @@
-OpenBase Software License (OBSL) - placeholder
-See LICENSE file in the project root for full license text.
+# 🧾 OpenBase Software License (OBSL)
+Version 1.0 — November 2025  
+Copyright © OpenBase Foundation
 
-This repository is intended to use the OpenBase Software License (OBSL). Replace this
-placeholder with the full OBSL text in the project root before publishing.
+---
+
+## 1. Doel
+De **OpenBase Software License (OBSL)** is ontworpen om vrije en toegankelijke software te stimuleren voor educatieve, non-profit en kleine commerciële toepassingen.  
+Het combineert openheid met bescherming tegen grootschalig commercieel misbruik.
+
+---
+
+## 2. Gratis gebruik
+Het gebruik van deze software is **gratis** voor:
+
+- 🏫 **Educatieve instellingen** (scholen, universiteiten, onderzoeksprojecten)  
+- 💚 **Non-profitorganisaties** en vrijwilligersinitiatieven  
+- 👩‍💻 **Individuele gebruikers en ontwikkelaars**  
+- 🏢 **Kleine bedrijven** met **maximaal 10 medewerkers**
+
+Bovengenoemde partijen mogen:
+- De software **gebruiken, wijzigen, verspreiden en hosten**  
+- Eigen aanpassingen publiceren onder dezelfde of een compatibele open-source licentie  
+- Commercieel gebruik maken zolang het binnen bovenstaande grenzen valt  
+
+---
+
+## 3. Commercieel gebruik boven de limiet
+Organisaties met **meer dan 10 medewerkers** moeten een commerciële licentie afsluiten bij de **OpenBase Foundation** om de software legaal te gebruiken.  
+Deze licentie is bedoeld om onderhoud, beveiliging en verdere ontwikkeling van open software te ondersteunen.
+
+---
+
+## 4. Herdistributie
+Herdistributie van broncode of binaries is toegestaan mits:
+- De originele copyrightvermelding behouden blijft  
+- Deze licentietekst ongewijzigd wordt meegeleverd  
+- Eventuele wijzigingen duidelijk worden vermeld  
+
+---
+
+## 5. Aansprakelijkheid
+De software wordt geleverd **“zoals hij is”**, zonder enige garantie.  
+De auteurs en de OpenBase Foundation zijn **niet aansprakelijk** voor schade, verlies of gevolgschade die voortvloeit uit het gebruik van deze software.
+
+---
+
+## 6. Toepasselijk recht
+Deze licentie valt onder Nederlands recht.
+
+---
+
+## 7. Samenvatting (niet juridisch bindend)
+> Gratis voor scholen, kleine bedrijven, non-profits en individuen.  
+> Grote bedrijven mogen het ook gebruiken, maar dragen financieel bij.  
+> Alles open, eerlijk en in de geest van samenwerking.
+
+---
+
+**OpenBase Foundation**  
+> “Open software, strong foundations.”
